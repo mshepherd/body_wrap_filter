@@ -1,0 +1,4 @@
+; $Id$
+name = Body wrap filter
+description = Wraps body field  content in a div
+core = 6.x

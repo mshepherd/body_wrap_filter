@@ -1,4 +1,17 @@
-function iutilities_filter($op, $delta = 0, $format = -1, $text = '') {
+<?php
+// $Id$
+
+/**
+ * @file
+ * Wraps body field  content in a div
+ *
+ * Adds an input filter that, once enabled for an input format,
+ * puts a wrapper div around body field content. This can be useful
+ * for themers when displaying content from many fields and the body
+ * field content needs it's own style.
+ */
+
+function body_wrap_filter_filter($op, $delta = 0, $format = -1, $text = '') {
   switch ($op) {
     case 'list':
       return array(
