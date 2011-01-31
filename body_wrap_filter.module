@@ -29,10 +29,6 @@ function body_wrap_filter_filter($op, $delta = 0, $format = -1, $text = '') {
       //it's ok to cache this filter's output
       return FALSE;
 
-    case 'prepare':
-      //no preparations to make
-      return $text;
-
     case 'process':
       return '<div class="body-field-content">' . $text . '</div>';
 
