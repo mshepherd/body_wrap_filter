@@ -11,6 +11,9 @@
  * field content needs it's own style.
  */
 
+/**
+ * Implementation of hook_filter()
+ */
 function body_wrap_filter_filter($op, $delta = 0, $format = -1, $text = '') {
   switch ($op) {
     case 'list':
@@ -19,7 +22,7 @@ function body_wrap_filter_filter($op, $delta = 0, $format = -1, $text = '') {
       );
 
     case 'description':
-      return t('Wraps the content of the body field for easier styling when other fields get included in the content');
+      return t('Wraps the content of the body field for easier styling when other fields get included in the content.');
 
     case 'settings':
       // no settings for this filter
@@ -28,6 +31,9 @@ function body_wrap_filter_filter($op, $delta = 0, $format = -1, $text = '') {
     case 'no cache':
       //it's ok to cache this filter's output
       return FALSE;
+
+    case 'prepare':
+      return $text;
 
     case 'process':
       return '<div class="body-field-content">' . $text . '</div>';

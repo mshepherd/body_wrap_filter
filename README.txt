@@ -1,3 +1,5 @@
+$Id$
+
 Body Wrap Filter Module
 =======================
 
@@ -21,7 +23,7 @@ installation and configuration notes below.
 Installation
 ------------
 
-Follow the normal procedure to install a module.
+Follow the normal procedure to install and enable a module.
 
 See http://drupal.org/node/70151 for further information.
 
@@ -36,6 +38,6 @@ To get this filter working for any of your site's input formats:
 4 Check if the HTML filter is selected (*)
 5 Save the configuration
 
-(*) If you are also using the HTML filter, you should change the weight of this
-filter so that it is triggered after the HTML filter. Open the Rearrange tab to
-make this change.
+(*) If you are also using the HTML filter, you should change the weight of the
+'Wrap body field content' filter so that it is triggered after the HTML filter.
+Open the Rearrange tab to make this change.
